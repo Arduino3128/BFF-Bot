@@ -1,0 +1,12 @@
+Hello! I am BFF bot :robot:, I work 24/7!
+
+I manage all of your birthdays and events!
+I can play songs of your choice, play Games
+with you, tell random ~~useless~~ facts 
+and information of upcoming space missions.
+
+To get help use `!help`.
+
+
+I am developed by Kanad Nemade
+(arduino3128.github.io)
