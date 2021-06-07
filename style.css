@@ -126,6 +126,10 @@ a:hover, button:hover {
   box-shadow: -1px 1px 20px 2px #00000030;
 }
 
+.card-title{
+  padding-bottom:5px;
+}
+
 .statics-section {
   background-color: #E6F0FA;
   color: #03192E;
