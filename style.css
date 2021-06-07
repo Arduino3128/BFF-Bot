@@ -127,9 +127,8 @@ a:hover, button:hover {
 }
 
 .card-title{
-  padding-bottom:5px;
+  padding-bottom:10px;
 }
-
 .statics-section {
   background-color: #E6F0FA;
   color: #03192E;
@@ -153,7 +152,7 @@ a:hover, button:hover {
 }
 
 .features-card {
-  padding: 15px;
+  padding: 35px;
 }
 
 .row {
