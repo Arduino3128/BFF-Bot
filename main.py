@@ -17,19 +17,19 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_guild_join(guild):
-  ID = str(guild.id)
-  db[ID] = {}
-  db[ID]["Birthday"] = {}
-  db[ID]["Reminder"] = {}
-  for channel in guild.channels:
-		  if str(channel)=='announcements':
-			  channel_id=int(channel.id)
-			  break
-  print(channel_id)
-  channel = bot.get_channel(channel_id)
-  embed = discord.Embed(title="Hello! I am BFF Bot",description=":wave: I keep record of your birthdays :confetti_ball:",color=0x2E5090)
-  embed.set_footer(text="I am developed by Kanad Nemade")
-  await channel.send(embed=embed)
+	ID = str(guild.id)
+	db[ID] = {}
+	db[ID]["Birthday"] = {}
+	db[ID]["Reminder"] = {}
+	for channel in guild.channels:
+			if str(channel)=='announcements':
+				channel_id=int(channel.id)
+				break
+	print(channel_id)
+	channel = bot.get_channel(channel_id)
+	embed = discord.Embed(title="Hello! I am BFF Bot",description=":wave: I keep record of your birthdays :confetti_ball:",color=0x2E5090)
+	embed.set_footer(text="I am developed by Kanad Nemade")
+	await channel.send(embed=embed)
 
 @bot.event
 async def on_guild_remove(guild):
@@ -41,16 +41,16 @@ async def on_guild_remove(guild):
 
 @bot.event
 async def on_ready():
-  with open("config/cogs.json",'r') as config:
-    configs=json.load(config)
-  print("Loading Cogs")
-  for cog in configs["Cogs"]:
-    try:
-      bot.load_extension(cog)
-      print(f"Cog {cog} loaded successfully!")
-    except Exception as error:
-      print(f"Cog {cog} failed to load.",str(error))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='over the server'))
+	with open("config/cogs.json",'r') as config:
+		configs=json.load(config)
+	print("Loading Cogs")
+	for cog in configs["Cogs"]:
+		try:
+			bot.load_extension(cog)
+			print(f"Cog {cog} loaded successfully!")
+		except Exception as error:
+			print(f"Cog {cog} failed to load.",str(error))
+	await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='over the server'))
 
 keep_alive()
 bot.run(os.environ['TOKEN'])
