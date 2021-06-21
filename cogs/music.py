@@ -46,7 +46,7 @@ class Music(commands.Cog):
 		temp=[url for url in search_results]
 		url=temp[0]
 		YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist':'True','-x':'','audioquality':"4"}
-		FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
+		FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 ', 'options': '-vn'}
 		voice = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
 		if not voice.is_playing():
 			with YoutubeDL(YDL_OPTIONS) as ydl:

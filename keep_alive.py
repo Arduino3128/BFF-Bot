@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	return redirect("https://arduino3128.github.io/BFF-Bot/", code=200)
+	return redirect("https://arduino3128.github.io/BFF-Bot/", code=301)
 def run():
 	app.run(host='0.0.0.0', port=8080)
 def keep_alive():
